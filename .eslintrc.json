@@ -1,0 +1,62 @@
+{
+  "extends": [
+    "airbnb",
+    "prettier",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  //"parser": [],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "codeFrame": false,
+    "allowImportExportEverywhere": false
+  },
+  "plugins": ["react", "import", "jsx-a11y"],
+  "rules": {
+    "import/extensions": [
+      0,
+      "ignorePackages",
+      {
+        "ignorePackages": true,
+        "pattern": {
+          "<extension>": "ignorePackages"
+        }
+      }
+    ],
+    "eslint-no-undef": "on",
+    "no-underscore-dangle": 0,
+    "react/no-array-index-key": "off",
+    "eslintimport/extensions": 0,
+    "import/no-unresolved": 0,
+    "import/no-named-as-default-member": 0,
+    "import/no-named-as-default-member": 0,
+    "react/display-name": 1,
+    "jsx-a11y/rule-name": 0,
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "global-require": "off",
+    "import/prefer-default-export": "off",
+    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
+    "no-return-assign": ["off"],
+    "prefer-promise-reject-errors": ["off"],
+    "react/prop-types": ["warn"]
+  }
+}
