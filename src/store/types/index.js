@@ -1,5 +1,0 @@
-export const Types = {
-  ADD_CARD: "ADD_CARD",
-  SHOW_MESSAGE: "SHOW_MESSAGE",
-  HIDE_MESSAGE: "HIDE_MESSAGE"
-};
