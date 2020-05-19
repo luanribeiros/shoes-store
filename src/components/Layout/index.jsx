@@ -1,31 +1,34 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import * as S from './styles'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import * as S from './styles';
 
 const Layout = ({ children }) => {
+  const length = useSelector((state) => state.cart.length);
+
   return (
     <S.BgContainer>
       <S.BgHeader>
         <S.SectionLeft>
           <S.Title>
-            <Link to="/" className="links">
-              Shoe Store
-            </Link>
+            <NavLink to="/" className="links">
+              Product Store
+            </NavLink>
           </S.Title>
           <S.Nav>
             <S.Ul>
-              <S.A> 
+              <S.A>
                 <S.Li>
-                  <Link to="/about" className="links">             
+                  <NavLink to="/about" className="links">
                     About
-                  </Link>
+                  </NavLink>
                 </S.Li>
               </S.A>
-              <S.A> 
+              <S.A>
                 <S.Li>
-                  <Link to="/register-product" className="links">
+                  <NavLink to="/register-product" className="links">
                     Register Product
-                  </Link>
+                  </NavLink>
                 </S.Li>
               </S.A>
             </S.Ul>
@@ -33,12 +36,14 @@ const Layout = ({ children }) => {
         </S.SectionLeft>
         <S.SectionRight>
           <S.Logout>Logout</S.Logout>
-          <S.Cart> Cart </S.Cart>
+          <NavLink to="/cart-product" className="links">
+            <S.Cart> {length} </S.Cart>
+          </NavLink>
         </S.SectionRight>
       </S.BgHeader>
-      { children }
+      {children}
     </S.BgContainer>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

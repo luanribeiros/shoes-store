@@ -37,13 +37,16 @@
         }
       }
     ],
-    "eslint-no-undef": "on",
+    "includeExports": 0,
+    "eslint-no-undef": 0,
+    "import/named": 0,
     "no-underscore-dangle": 0,
+    "react/jsx-wrap-multilines": "off",
     "react/no-array-index-key": "off",
     "eslintimport/extensions": 0,
     "import/no-unresolved": 0,
     "import/no-named-as-default-member": 0,
-    "import/no-named-as-default-member": 0,
+    "import/no-extraneous-dependencies": 0,
     "react/display-name": 1,
     "jsx-a11y/rule-name": 0,
     "react/jsx-filename-extension": [
@@ -52,11 +55,19 @@
         "extensions": [".js", ".jsx"]
       }
     ],
+    "import/no-useless-path-segments": [
+      "error",
+      {
+        "noUselessIndex": true
+      }
+    ],
+    "import/no-duplicates": ["error", { "considerQueryString": true }],
     "global-require": "off",
     "import/prefer-default-export": "off",
     "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
     "no-return-assign": ["off"],
     "prefer-promise-reject-errors": ["off"],
-    "react/prop-types": ["warn"]
+    "react/prop-types": ["warn"],
+    "react/jsx-one-expression-per-line": ["off"]
   }
 }
