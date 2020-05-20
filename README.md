@@ -10,6 +10,7 @@
 - Styled Components
 - Eslint (Airbnb)
 - Prettier
+- Husky with `pre-commit`
 
 ## Dependencies:
 
