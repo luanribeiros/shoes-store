@@ -26,4 +26,4 @@
 
 ## License
 
-[MIT]() &copy; Luan Ribeiro
+[MIT](https://github.com/luanribeiros/shoes-store/blob/master/LICENSE.md) &copy; Luan Ribeiro
